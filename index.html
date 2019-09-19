@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eclectic Kitchen Recipe Finder</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4858cbeca2.js"></script>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>The <span class="eclecticKitchen">Eclectic Kitchen</span> Recipe Finder</h1>
+
+        <form id="js-form">
+
+            <div class="search">
+              <label for="search-term" class="searchIntro">What are we working with here? </label>
+              <input type="text" name="search-term id="js-search-term" placeholder="waffles, ketchup, soup, etc." required>
+            </div>
+
+            <button class="submitButton"><i class="fa fa-search"></i></button>
+
+        </form>
+
+        <i class="fas fa-utensils"></i>
+
+        <div class="filters hidden">
+          
+          <ul class="typeFilter dietFilter">
+            <li class="high-protein">High Protein</li>
+            <li class="low-carb">Low Carb</li>
+            <li class="low-fat">Low Fat</li>
+          </ul>  
+          
+          <ul class="typeFilter healthFilter">
+            <li class="Vegan">Vegan</li>
+            <li class="Vegetarian">Vegetarian</li>
+            <li class="Sugar-Conscious">Low Sugar</li>
+          </ul>         
+
+          <ul class="typeFilter ingredientFilter">
+            <li class="lowIngredients">0-5 ingredients</li>
+            <li class="mediumIngredients">6-10 ingredients</li>
+            <li class="highIngredients">11+ ingredients</li>
+          </ul>
+           
+          <button type="button" class="showAllButton">Show All</button>
+
+
+      </div>
+
+        <p id="js-error-message" class="error-message"></p>
+        
+        <div class="ingredientsSelected hidden">
+        </div> 
+
+        <section id="results" class="hidden">
+          <ul id="results-list">
+          </ul>
+
+        <div class="changeRecipePageButtons">
+
+          <button type="button" class="previousRecipesButton">Previous Recipes</button>
+
+          <button type="button" class="moreRecipesButton">More Recipes</button>
+
+        </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+      <div id="edamam-badge" data-color="white"></div>
+    </footer>  
+
+    <script src="index.js"></script>
+
+</body>
+</html>
